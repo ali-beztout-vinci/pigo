@@ -12,8 +12,8 @@
   "scripts": {
     "test": "jest --coverage",
     "commit": "cz",
-    "build": "webpack ./src/app.js -o public/",
-    "preview": "webpack ./src/app.js -o public/ && webpack serve ./public/main.js --mode=development --hot",
+    "build": "webpack --mode production ./src/app.js -o public/",
+    "preview": "webpack serve --mode development ./src/app.js --output-path ./public --port 8080 --hot",
     "prettier": "prettier -c \"src/**/*.js\"",
     "prettier:fix": "prettier -c \"src/**/*.js\" --write",
     "lint": "eslint \"src/**/*.js\"",
